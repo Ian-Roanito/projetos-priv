@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+main {
+    background: url('../imagens/sheng-hu-ixt3f4b-nNg-unsplash.jpg') center center no-repeat;
+    background-size: cover;
+    height: 92vh; /* 92vh pq o header já tem 8vh*/
+}
