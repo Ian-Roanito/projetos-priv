@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Roanitchou</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logotipo"><a href="#">Roanitchou</a></li>
+                <li class="hideBonile"><a href="#">Início</a></li>
+                <li class="hideBonile"><a href="#">Serviços</a></li>
+                <li class="hideBonile"><a href="#">Projetos</a></li>
+                <li class="hideBonile"><a href="#">Blog</a></li>
+                <li class="hideBonile"><a href="#">Contato</a></li>
+                <li class="hideDesktop" onclick="showsidebar()"><a href="#">
+                    <span class="material-symbols-outlined">menu</span>
+                </a></li>
+            </ul>
+
+            <ul class="sidebar">
+                
+                <li onclick="hidesidebar()"><a href="#">
+                    <span class="material-symbols-outlined">close</span>
+                </a></li>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Projetos</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="content">
+            <h1>Olá, Sou Ian, programador.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae illo consectetur, enim iure ipsum dolores, </p>
+        </div>
+    </main>
+
+    <script>
+        function showsidebar() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display = "flex";
+        }
+
+        function hidesidebar() {
+            const sidebar = document.querySelector(".sidebar");
+            sidebar.style.display = "none";
+        }
+    </script>
+</body>
+</html>
