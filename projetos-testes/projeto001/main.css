@@ -15,11 +15,13 @@
     width: 90vw;
     margin: auto;
     background-color: white;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.63);
 }
 
 .blocos {
     width: 80vw;
     margin: auto;
+    padding: 20px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
@@ -39,14 +41,18 @@
 }
 
 .about p {
-    width: 300px;
+    width: auto;
     padding: 10px;
+    text-align: justify;
 }
 .img {
     width: 200px;
     height: 200px;
-    background: url('imagens/jon-moore-_2MyZDsUSM4-unsplash.jpg') center center no-repeat scroll;
+    padding: 20px;
+    border: 5px solid white;
+    background: white url('imagens/jon-moore-_2MyZDsUSM4-unsplash.jpg') center center no-repeat scroll;
     background-size: cover;
+    flex-shrink: 0;
 }
 
 /* SECTION 2*/
@@ -56,11 +62,12 @@
     width: 30vw;
     background: url('imagens/sandra-martins-TPh6y6W_58E-unsplash.jpg') center center no-repeat scroll;
     background-size: cover;
+    flex-shrink: 0;
 }
 
 
 #central {
-    width: 60vw;
+    width: 80vw;
     background-color: yellow;
     display: flex;
     gap: 20px;
@@ -71,7 +78,7 @@
     padding: 10px;
     margin: 20px 0px;
     transition: transform 0.8s ease;
-    
+    flex-shrink: 1;
 }
 
 .caracteristicas div:hover {
@@ -83,7 +90,9 @@
 }
 
 .caracteristicas p {
-    width: 400px;
+    width: 40vw;
+    flex-shrink: 1;
+    text-align: justify;
 }
 
 .caracteristicas ul {
@@ -92,4 +101,116 @@
 
 .caracteristicas ul > li::before {
     content: '- ';
+}
+
+/* SECTION 3 */
+
+#section3 {
+    background-color: greenyellow;
+    position: relative;
+    background: greenyellow;
+    
+}
+
+
+
+#cultivo {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 25px;
+    flex-flow: row wrap;
+    background-color: greenyellow;
+    height: 70vh;
+}
+
+#section3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('imagens/matt-artz-nTRDnDdDYk8-unsplash.jpg') center center no-repeat scroll;
+    background-size: cover;
+
+    clip-path: polygon(0 0, 100% 0, 100% 1%, 0 100%);
+}
+
+.blocoCultivo {
+    background-color: green;
+    width: 20vw;
+    height: 30vh;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+    z-index: 2;
+}
+
+@media (max-width: 1283px) {
+    .bloco2 {
+        display: none;
+    }
+
+    .blocoCultivo {
+        width: 25vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .culti4 {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .culti3 {
+        display: none;
+    }
+
+    .blocoCultivo {
+        width: 30vw;
+    }
+}
+
+@media (max-width: 665px) {
+
+    #cultivo {
+        flex-flow: row wrap;
+    }
+
+    .culti3, .culti4 {
+        display: block;
+    }
+
+    .blocoCultivo {
+        width: 35vw;
+    }
+
+    .blocoCultivo p {
+        font-size: 15px;
+    }
+
+}
+
+
+@media (max-width: 655px) {
+    .about p {
+        font-size: 13px;
+    }
+
+    #central {
+        width: 100vw;
+    }
+
+    .caracteristicas div {
+        width: 50vw;
+    }
+
+    .caracteristicas p {
+        width: 45vw;
+    }
+
+    #img {
+        width: 40vw;
+    }
 }
