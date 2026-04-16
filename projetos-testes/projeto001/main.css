@@ -5,7 +5,19 @@
     background: url('imagens/claudio-testa--SO3JtE3gZo-unsplash.jpg') center center no-repeat scroll;
     background-size: cover;
     margin-bottom: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+section#hero > h1 {
+    color: white;
+    margin-bottom: 100px;
+    border-bottom: 2px solid white;
+}
+
 
 #section1 {
     position: absolute;
@@ -153,6 +165,10 @@
 
     .blocoCultivo {
         width: 25vw;
+    }
+
+    .culti4 {
+        display: none;
     }
 }
 
