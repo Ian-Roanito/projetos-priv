@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+/* Hero Banner */
+
+section.hero-banner {
+    height: 90vh;
+    background: url('../imagens/daniele-levis-pelusi-LyiuOfvh_8Y-unsplash.jpg') center center no-repeat scroll;
+    background-size: cover;
+
+    .interface {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 5%;
+        
+        .txt-hero {
+            max-width: 700px;
+            color: white;
+            /* border: 2px dashed black; */
+        }
+    }
+
+}
+
+.hero-banner .txt-hero {
+
+    h2 {
+        font-size: 3em;
+        font-weight: 300;
+        line-height: 40px;
+        display: inline-block;
+
+        span {
+            display: block;
+            font-weight: 700;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        padding: 10px 0px;
+        display: inline-block;
+    }
+}
+
+section.container {
+    width: 300px;
+    height: 500px;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .botao {
+        width: 200px;
+        height: 50px;
+        margin: 10px 0px;
+        background-color: lightcyan;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.596);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        transition: 0.9s ease;
+    }
+} 
+
+.botao {
+
+    .icon {
+        transform: translateX(30px);
+        transition: transform 0.9s ease;
+        
+    }
+
+    .txt-botao {
+        opacity: 1;
+        pointer-events: none;
+        color: black;
+        transition: transform 0.6s ease, opacity 0.7s ease-in, color 0.3s ease-in; 
+    }
+}
+
+
+
+
+
+.container .botao:hover {
+    width: 250px;
+
+    .txt-botao {
+        opacity: 1;
+        transform: translateX(0);
+        color: black;
+    }
+
+    .icon {
+        transform: translateX(0);
+    }
+}
+
+/* Serviços */
+
+section.servicos .txt-servico {
+
+    h3 {
+        font-size: 2em;
+        font-weight: 300;
+
+        span {
+            font-weight: 700;
+        }
+    }
+}
+
+section.servicos {
+    padding: 80px 0px;
+}
+
+section.servicos .interface, .produto-servico {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+/* .txt-servico, .produto-servico {
+    display: inline-block;
+    width: 50%;
+    margin-right: -4px;
+    vertical-align: top;
+} */
+
+.produto-servico {
+    width: 800px;
+    height: 300px;
+
+    .item {
+        width: 240px;
+        padding: 20px 10px;
+        background-color: white;
+        transition: 0.2s;
+
+        h4 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        img {
+            width: 50px;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.548);
+        }
+    }
+}
+
+/* Metas */
+
+.metas {
+    background-color: rgb(9, 9, 100);
+    color: white;
+    padding: 60px 0;
+    
+
+    .interface {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+
+        .txt-meta h2 {
+            font-size: 2em;
+            font-weight: 300;
+
+            span {
+                display: block;
+                margin-right: -4px;
+                font-weight: 700;
+            }
+        }
+
+        .bloco-metas {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+
+            .bloco {
+                margin-left: 50px;
+                text-align: center;
+
+                h3 {
+                    font-size: 2em;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+/* Contatos */
+
+.contatos {
+    background-color: rgb(9, 9, 100);
+    margin: 20px;
+    padding: 80px 0;
+
+    .interface {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .btn-contato{
+           
+            width: clamp(500px, 5vw, 300px);
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            button {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 250px;
+                padding: 15px 0;
+                margin-bottom: 10px;
+                background-color: transparent;
+                border: 2px solid white;
+                color: white;
+                transition: 0.5s;
+
+                i {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+
+        .txt-contato h2 {
+            font-size: 2em;
+            font-weight: 300;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+
+            span {
+                display: block;
+                font-weight: 700;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 150px;
+                height: 3px;
+                background-color: white;
+
+            }
+        }
+    }
+}
